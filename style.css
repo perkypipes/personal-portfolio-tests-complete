@@ -1,0 +1,79 @@
+*{
+    margin: 0px;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    background-color: #275d38;
+}
+
+#navlist {
+    display: flex;    
+    list-style: none;
+    width: 20%;
+}
+
+#navlist a {
+   display: block;
+    font-size: 2.2rem;
+    padding: 1.5rem;
+}
+
+#navlist a:hover {
+    background: #45562d;
+}
+
+a {
+    text-decoration: none;
+    color: #f0f0f0;
+}
+li {
+    font-size:1.75rem;
+    color: #fff;
+}
+
+#welcome-section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 4rem;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  margin-bottom: 6rem;
+}
+
+.project {
+  background: var(--main-gray);
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  border-radius: 2px;
+}
+
+.project-title {
+  font-size: 2rem;
+  padding: 2rem 0.5rem;
+}
+
+.project-image {
+    height: calc(100% - 6.8rem);
+    width: 100%;
+    object-fit: cover;
+}
+@media (max-width: 28.75em) {
+    .projects-section-header {
+        font-size: 4rem;
+    }
+}
+    /*https://codepen.io/freeCodeCamp/pen/zNBOYG?editors=1100
