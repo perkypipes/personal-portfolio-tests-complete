@@ -3,19 +3,18 @@
 }
 
 nav {
-    display: flex;
-    justify-content: flex-end;
-    position: fixed;
-    align-items: center;
-    width: 100%;
-    height: 60px;
-    background-color: #275d38;
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  width: 100%;
+  background-color: #a99db3;
 }
+
 
 #navlist {
     display: flex;    
     list-style: none;
-    width: 20%;
+    margin-right: 2rem;
 }
 
 #navlist a {
@@ -25,7 +24,8 @@ nav {
 }
 
 #navlist a:hover {
-    background: #45562d;
+    background: #514357;
+    
 }
 
 a {
@@ -43,6 +43,10 @@ li {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.75rem;
+    color: #fff;
+    background-color: #363636
 }
 
 .projects-grid {
@@ -53,6 +57,15 @@ li {
   max-width: 1280px;
   margin: 0 auto;
   margin-bottom: 6rem;
+
+}
+
+.projects {
+    text-align: center;
+    padding: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    color: #363636;
 }
 
 .project {
@@ -64,6 +77,9 @@ li {
 .project-title {
   font-size: 2rem;
   padding: 2rem 0.5rem;
+  color: #514357;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
 }
 
 .project-image {
@@ -75,5 +91,45 @@ li {
     .projects-section-header {
         font-size: 4rem;
     }
+}
+
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 80vh;
+    padding: 0 2rem;
+    background: #363636;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.contact-details {
+    font-size: 1.5rem;
+    text-shadow: 2px 2px 1px #1f1f1f;
+    transition: transform 0.3s ease-out;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 2px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2rem;
+    background: #f6eefa;
+    border-top: 4px solid #514357;
+    font-family: Arial, Helvetica, sans-serif;
 }
     /*https://codepen.io/freeCodeCamp/pen/zNBOYG?editors=1100
