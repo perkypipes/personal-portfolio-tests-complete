@@ -24,8 +24,8 @@ console.log(films[0].opening_crawl)
 
 people.forEach(function(person) {
     let personDiv = document.createElement('div')
-    let name = document.createElement('h1')
-    let gender = document.createElement('h3')
+    let name = document.createElement('h3')
+    let gender = document.createElement('p')
     let pic = document.createElement('img')
 
     personDiv.appendChild(name)
@@ -63,11 +63,11 @@ maleButton.addEventListener('click', () => {
       let matchedDiv = allDivs.filter(element => {
            return element.firstChild.textContent === elt.name
        })
-       matchedDiv[0].setAttribute("style", "display: none;")
+       matchedDiv[0].setAttribute("style", "display: none;") 
     })
-    femaleCharacters.forEach(elt => {
+/*     femaleCharacters.forEach(elt => {
         //elt.setAttribute("style", "visibility: hidden;")
-    })
+    }) */
 })
 let femaleButton = document.createElement('button')
 femaleButton.textContent = "Female Characters"

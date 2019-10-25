@@ -1,10 +1,6 @@
-h1 {
-    color: blue;
-}
-
 main {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
     grid-gap: 2rem;
     width: 100%;
     max-width: 1280px;
@@ -18,9 +14,27 @@ header {
 }
 
 button {
-    padding: 20px;
-    font-size: 1.5rem;
-    border-radius: 10% / 50%;
-    background-color: bisque;
+    padding: 15px;
+    font-size: 1rem;
+    border-radius: 10px;
+    background-color: lightgrey;
     visibility: visible;
+    margin: 15px;
+}
+
+img {
+    width: 120px;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #d6abf3;
+    border-radius: 10px;
+    padding: 6px;
+    margin-bottom: 20px;
+}
+h3, p {
+    margin: 0px;
 }
