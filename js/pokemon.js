@@ -121,6 +121,6 @@ document.querySelector('#pokeButton').addEventListener('click', () => {
         populateDOM(result) 
     }).catch(error => console.log(error))
     } else {
-    alert('That Pokemon ID does not exist! (but 1-809 do!)')
+    alert('That Pokemon ID does not exist! (but 1-806 do!)')
 } 
 })
