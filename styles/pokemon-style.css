@@ -59,7 +59,7 @@ body { font-family: sans-serif; }
 }
 
 .card__face--back {
-  background: blue;
+  background-image: url("/images/pokemoncard-back.png");
   transform: rotateY(180deg);
 }
 
