@@ -1,3 +1,10 @@
+body {
+  background-image: url("/images/pokemonbg.jpg");
+  background-repeat: repeat;
+  background-position: left top;
+  background-size: 300px 300px;
+}
+
 main {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -48,7 +55,7 @@ body { font-family: sans-serif; }
 }
 
 .card__face--front {
-  background: red;
+  background-image: url("/images/pokemoncard-test.png")
 }
 
 .card__face--back {
@@ -58,9 +65,9 @@ body { font-family: sans-serif; }
 
 p {
    position: absolute;
-   bottom: 10px;
+   bottom: 8px;
    margin: 0px;
-   font-size: 18px;
+   font-size: 14px;
    line-height: 0rem;
 }
 

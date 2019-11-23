@@ -72,12 +72,13 @@ function fillCardFront(pokeFront, data) {
     let pic = document.createElement('img')
     pic.setAttribute('class', 'picDivs')
     let pokeNum = getPokeNumber(data.id)
-    //pokeFront.appendChild(name)
-    //name.textContent = `${data.name} height: ${data.height}`
+
+    
+    pokeFront.appendChild(name)
     //pic.src = `../images/${pokeNum}.png`
 
     pic.src = `https://raw.githubusercontent.com/fanzeyi/pokemon.json/master/images/${pokeNum}.png`
-
+    name.textContent = `#${data.id} ${data.name[0].toUpperCase()}${data.name.slice(1)}`
     pokeFront.appendChild(pic)
     //pokeFront.appendChild(name)
 }
@@ -87,6 +88,7 @@ function fillCardBack(pokeBack, data) {
     let pokeHP = document.createElement('h5')
     pokeOrder.textContent = `#${data.id} ${data.name[0].toUpperCase()}${data.name.slice(1)}`
     //this is pretty neat^^
+    //name.textContent = `${data.name} height: ${data.height}`
     //pokeHP.textContent = data.stats[0].base_stat
     pokeBack.appendChild(pokeOrder)
     pokeBack.appendChild(pokeHP)
