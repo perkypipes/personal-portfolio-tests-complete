@@ -125,7 +125,7 @@ revertButton.addEventListener('click', () => {
 
 mainHeader.appendChild(maleButton)
 mainHeader.appendChild(femaleButton)
-mainHeader.appendChild(noneButton)
+//mainHeader.appendChild(noneButton)
 mainHeader.appendChild(revertButton)
 
 
