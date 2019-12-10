@@ -9,22 +9,43 @@ body {
   font-family: "Open Sans", "sans-serif";
   background-color: #fff;
   color: #444;
+  background-image: url("/images/starstwinkle.gif");
+  background-repeat: repeat;
+  background-position: left top;
+  background-size: 300px 300px;
 }
 
-h1,
-p {
+h1, p {
   margin: 0 0 1em 0;
 }
 
-/* no grid support? */
 .sidebar {
   float: left;
   width: 19.1489%;
 }
 
+ul{
+  color: white;
+  text-decoration: none;
+}
+
+li {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  text-decoration: none;
+}
+
 .content {
-  float: right;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
   width: 79.7872%;
+}
+
+.content img {
+  height: 300px;
+  padding: 25px;
 }
 
 /* make a grid */
@@ -46,8 +67,7 @@ p {
   margin-bottom: 10px;
 }
 
-.header,
-.footer {
+.header, .footer {
   grid-column: 1 / -1;
   /* needed for the floated layout */
   clear: both;

@@ -7,7 +7,7 @@ starships.forEach(ship => {
     let shipName = document.createElement('h3')
     let shipPic = document.createElement('img')
 
-    shipName.textContent = ship.nam
+    shipName.textContent = ship.name
     let shipNum = getCharNumber(ship.url)
 
     shipPic.src = `https://starwars-visualguide.com/assets/img/starships/${shipNum}.jpg`

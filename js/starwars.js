@@ -82,8 +82,32 @@ femaleButton.addEventListener('click', () => {
         //elt.setAttribute("style", "visibility: hidden;")
     })
 })
+
+//button to clear previous buttons
+let allButton = document.createElement('button')
+allButton.textContent = "All Characters"
+allButton.addEventListener('click', () => {
+    femaleCharacters.forEach(elt => {
+        let matchedDiv = allDivs.filter(element => {
+            return element.firstChild.textContent === elt.name
+          })
+          matchedDiv[0].setAttribute("style", "display: revert")
+          
+        })
+     })
+     allButton.addEventListener('click', () => {
+        maleCharacters.forEach(elt => {
+            let matchedDiv = allDivs.filter(element => {
+                return element.firstChild.textContent === elt.name
+              })
+              matchedDiv[0].setAttribute("style", "display: revert")
+              
+            })
+         })
+
 mainHeader.appendChild(maleButton)
 mainHeader.appendChild(femaleButton)
+mainHeader.appendChild(allButton)
 
 /* const maleCharacters = people.filter(person => person.gender === 'male')
 console.log(maleCharacters)

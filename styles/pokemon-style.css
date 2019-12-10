@@ -1,3 +1,8 @@
+#pokecenter {
+  margin-top: 0px;
+}
+
+
 body {
   background-image: url("/images/pokemonbg.jpg");
   background-repeat: repeat;
@@ -15,13 +20,23 @@ main {
     margin-bottom: 6rem;
 }
 
-h1, h3 {
+h1, h3{
 text-align: center;
 }
 
+h4 {
+  text-align: center;
+  color:rgba(163, 173, 173, 0.4);
+  font-family: 'Courier New', Courier, monospace;
+  }
+
+
+
 img {
-    width: 120px;
+    margin-top: 50px;
+    width: 150px;
 }
+
 
 body { 
   font-family: sans-serif; 
@@ -30,7 +45,7 @@ body {
 .scene {
   width: 200px;
   height: 260px;
-  border: 1px solid #600;
+  /*border: 1px solid #600;*/
   margin: 0px;
   perspective: 600px;
 }
@@ -85,4 +100,12 @@ button {
     font-size: 1.5rem;
     border-radius: 10px;
     margin: 20px;
+}
+
+h6 {
+   padding: 10px;
+    bottom: 10px;
+    left: 10px;
+    font-size: .8rem;
+    line-height: 18px;
 }

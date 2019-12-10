@@ -61,11 +61,12 @@ function populateDOM(single_pokemon) {
     
     mainArea.appendChild(pokeScene)
 
+    //this makes it flip when clicked
     pokeCard.addEventListener( 'click', function() {
         pokeCard.classList.toggle('is-flipped');
     });
 }
-
+//Information on the card front
 function fillCardFront(pokeFront, data) {
     pokeFront.setAttribute('class', 'card__face card__face--front')
     let name = document.createElement('p')
@@ -85,14 +86,54 @@ function fillCardFront(pokeFront, data) {
 
 function fillCardBack(pokeBack, data) {
     let pokeOrder = document.createElement('p')
-    let pokeHP = document.createElement('h5')
+    let pokeHP = document.createElement('h6')
+    let pokeWeight = document.createElement('h6')
+    let pokeHeight = document.createElement('h6')
+    let pokeType = document.createElement('h6')
+    pokeBack.setAttribute('class', 'pokeBack')
+    //let pokeRegion = document.createElement('h6')
+    //let pokeRegion = getPokeRegion(data.region)
     pokeOrder.textContent = `#${data.id} ${data.name[0].toUpperCase()}${data.name.slice(1)}`
     //this is pretty neat^^
-    //name.textContent = `${data.name} height: ${data.height}`
-    //pokeHP.textContent = data.stats[0].base_stat
+    pokeHP.textContent = `HP: ${data.stats[0].base_stat}`
+    pokeWeight.textContent = `Weight: ${data.weight}kg`
+    pokeHeight.textContent = `Height: ${data.height}m`
+
+    //this was cool but i didn't wanna steal
+    //pokeType.textContent = `Type: ${data.types.map(t => t.type.name)}`
+    //pokeRegion.textContent = `Region: ${getPokeRegion}`
+
     pokeBack.appendChild(pokeOrder)
     pokeBack.appendChild(pokeHP)
+    pokeBack.appendChild(pokeWeight)
+    pokeBack.appendChild(pokeHeight)
+    pokeBack.appendChild(pokeType)
+    //pokeBack.appendChild(pokeRegion)
+
 }
+
+
+//Heres this cool function i can't call :(
+
+// function getPokeRegion(id) {
+//     if (id < 151) {
+//       return "Kanto";
+//     } else if (id > 151 && id < 252) {
+//       return "Jhoto";
+//     } else if (id > 250 && id < 387) {
+//       return "Hoenn";
+//     } else if (id > 386 && id < 494) {
+//       return "Sinnoh";
+//     } else if (id > 493 && id < 650) {
+//       return "Unova";
+//     } else if (id > 649 && id < 722) {
+//       return "Kalos";
+//     } else (id > 721 && id < 807) 
+//       return "Alola";
+// }
+
+
+
 
 function getPokeNumber(id) {
     if(id < 10) return `00${id}`
