@@ -87,19 +87,19 @@ femaleButton.addEventListener('click', () => {
 })
 
 //needs fixing
-let noneButton = document.createElement('button')
-noneButton.textContent = "Other Characters"
-noneButton.addEventListener('click', () => {
-    otherCharacters.forEach(elt => {
-      let matchedDiv = allDivs.filter(element => {
-           return element.firstChild.textContent === elt.name
-       })
-       matchedDiv[0].setAttribute("style", "display: none;") 
-    })
-/*     femaleCharacters.forEach(elt => {
-        //elt.setAttribute("style", "visibility: hidden;")
-    }) */
-})
+// let noneButton = document.createElement('button')
+// noneButton.textContent = "Other Characters"
+// noneButton.addEventListener('click', () => {
+//     otherCharacters.forEach(elt => {
+//       let matchedDiv = allDivs.filter(element => {
+//            return element.firstChild.textContent === elt.name
+//        })
+//        matchedDiv[0].setAttribute("style", "display: none;") 
+//     })
+// /*     femaleCharacters.forEach(elt => {
+//         //elt.setAttribute("style", "visibility: hidden;")
+//     }) */
+// })
 
 //button to undo the others 
 let revertButton = document.createElement('button')
