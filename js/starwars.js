@@ -53,9 +53,10 @@ function getCharNumber(charURL) {
 
 const maleCharacters = people.filter(person => person.gender === 'male')
 const femaleCharacters = people.filter(person => person.gender === 'female')
-//const otherCharacters = people.filter(person => person.gender !== 'female' && person.gender !== 'male')
+const otherCharacters = people.filter(person => person.gender !== 'female' && person.gender !== 'male')
 const allDivs = Array.from(mainArea.querySelectorAll('div'))
 
+//button that hides female characters
 let maleButton = document.createElement('button')
 maleButton.textContent = "Male Characters"
 maleButton.addEventListener('click', () => {
@@ -69,6 +70,8 @@ maleButton.addEventListener('click', () => {
         //elt.setAttribute("style", "visibility: hidden;")
     }) */
 })
+
+//button that hides male characters 
 let femaleButton = document.createElement('button')
 femaleButton.textContent = "Female Characters"
 femaleButton.addEventListener('click', () => {
@@ -83,10 +86,25 @@ femaleButton.addEventListener('click', () => {
     })
 })
 
-//button to clear previous buttons
-let allButton = document.createElement('button')
-allButton.textContent = "All Characters"
-allButton.addEventListener('click', () => {
+//needs fixing
+let noneButton = document.createElement('button')
+noneButton.textContent = "Other Characters"
+noneButton.addEventListener('click', () => {
+    otherCharacters.forEach(elt => {
+      let matchedDiv = allDivs.filter(element => {
+           return element.firstChild.textContent === elt.name
+       })
+       matchedDiv[0].setAttribute("style", "display: none;") 
+    })
+/*     femaleCharacters.forEach(elt => {
+        //elt.setAttribute("style", "visibility: hidden;")
+    }) */
+})
+
+//button to undo the others 
+let revertButton = document.createElement('button')
+revertButton.textContent = "Revert"
+revertButton.addEventListener('click', () => {
     femaleCharacters.forEach(elt => {
         let matchedDiv = allDivs.filter(element => {
             return element.firstChild.textContent === elt.name
@@ -95,7 +113,7 @@ allButton.addEventListener('click', () => {
           
         })
      })
-     allButton.addEventListener('click', () => {
+     revertButton.addEventListener('click', () => {
         maleCharacters.forEach(elt => {
             let matchedDiv = allDivs.filter(element => {
                 return element.firstChild.textContent === elt.name
@@ -107,7 +125,9 @@ allButton.addEventListener('click', () => {
 
 mainHeader.appendChild(maleButton)
 mainHeader.appendChild(femaleButton)
-mainHeader.appendChild(allButton)
+mainHeader.appendChild(noneButton)
+mainHeader.appendChild(revertButton)
+
 
 /* const maleCharacters = people.filter(person => person.gender === 'male')
 console.log(maleCharacters)
