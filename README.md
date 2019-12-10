@@ -1,12 +1,10 @@
 # Final Project for DGM 1600
 
 
-
-Here are some of the skills I've learned and have displayed on my 
 [Personal Portfolio Page - Netlify](https://piper-pillar.netlify.com)
 
 
-### [Basic HTML,](https://github.com/perkypipes/personal-portfolio-tests-complete/blob/master/index.html) [CSS and Flexbox](https://github.com/perkypipes/personal-portfolio-tests-complete/blob/master/styles/style.css)
+### [Basic HTML,](https://github.com/perkypipes/personal-portfolio-tests-complete/blob/master/index.html) [CSS and Flexbox](https://github.com/perkypipes/personal-portfolio-tests-complete/tree/master/styles)
 
 ### Basic JavaScript:
 * Proper use of variables with proper scope
