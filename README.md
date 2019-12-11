@@ -35,4 +35,4 @@
 ### Website is visually pleasing and easy to navigate and serves as a good example of learner's capability
 ### Website runs without errors
 
-#### Don't forget to click on the Death Star
+#### [Don't forget to click on the Death Star](https://piper-pillar.netlify.com/starwars.html)
