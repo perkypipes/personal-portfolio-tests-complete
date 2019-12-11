@@ -10,6 +10,7 @@ async function getAPIData(url) {
     }
 }
 
+//this grabs the pokemon data from the api
 const theData = getAPIData('https://pokeapi.co/api/v2/pokemon/?limit=25')
 .then(data => {
     for (const pokemon of data.results) {
@@ -22,8 +23,10 @@ const theData = getAPIData('https://pokeapi.co/api/v2/pokemon/?limit=25')
 
 console.log(theData)
 
+//defining the main area of the page
 let mainArea = document.querySelector('main')
 
+//setting up the card
 function populateDOM(single_pokemon) {
     //let pokeDiv = document.createElement('div')
     let pokeScene = document.createElement('div')
@@ -84,6 +87,7 @@ function fillCardFront(pokeFront, data) {
     //pokeFront.appendChild(name)
 }
 
+//information for the back of the card
 function fillCardBack(pokeBack, data) {
     let pokeOrder = document.createElement('p')
     let pokeHP = document.createElement('h6')
@@ -113,28 +117,29 @@ function fillCardBack(pokeBack, data) {
 }
 
 
-//Heres this cool function i can't call :(
+//I really wanted to use this function but I couldn't figure out how to get it to work because I'm not a javascript wizard.
 
-// function getPokeRegion(id) {
-//     if (id < 151) {
-//       return "Kanto";
-//     } else if (id > 151 && id < 252) {
-//       return "Jhoto";
-//     } else if (id > 250 && id < 387) {
-//       return "Hoenn";
-//     } else if (id > 386 && id < 494) {
-//       return "Sinnoh";
-//     } else if (id > 493 && id < 650) {
-//       return "Unova";
-//     } else if (id > 649 && id < 722) {
-//       return "Kalos";
-//     } else (id > 721 && id < 807) 
-//       return "Alola";
-// }
+/*function getPokeRegion(id) {
+    if (id < 151) {
+      return "Kanto";
+    } else if (id > 151 && id < 252) {
+      return "Jhoto";
+    } else if (id > 250 && id < 387) {
+      return "Hoenn";
+    } else if (id > 386 && id < 494) {
+      return "Sinnoh";
+    } else if (id > 493 && id < 650) {
+      return "Unova";
+    } else if (id > 649 && id < 722) {
+      return "Kalos";
+    } else (id > 721 && id < 807) 
+      return "Alola";
+}*/
 
+//Considered using an array for the regions 
+//var regions = [ "Kanto", "Johto", "Hoenn", "Sinnoh", "Unova", "Kalos", "Alola"]
 
-
-
+//getting the id of the pokemon and telling it how to display
 function getPokeNumber(id) {
     if(id < 10) return `00${id}`
     if(id > 9 && id < 100) {
@@ -142,6 +147,7 @@ function getPokeNumber(id) {
     } else return id
 }
 
+//saying what is with the pokemon
 class Pokemon {
     constructor(id, name, stats) {
         this.id = id;
@@ -153,6 +159,8 @@ class Pokemon {
 //know that the number is a number and not an array, also i get to be a vulpix bc its so cute
 //const Perkymon = new Pokemon(37, 'Perkymon', 118)
 
+//this is a button that is waiting for you to click it, once you do it will ask you to pick a number.
+//it will display either a new pokemon or throw an error when you don't put in a valid number.
 document.querySelector('#pokeButton').addEventListener('click', () => {
     let pokeId = prompt("Pick a Number:")
     let pokeIdNum = parseInt(pokeId, 10)
