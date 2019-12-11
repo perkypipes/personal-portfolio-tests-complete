@@ -7,7 +7,7 @@
 ### [Basic HTML,](https://github.com/perkypipes/personal-portfolio-tests-complete/blob/master/index.html) [CSS and Flexbox](https://github.com/perkypipes/personal-portfolio-tests-complete/tree/master/styles)
 
 ### Basic JavaScript:
-* [Basic Javascript in General](https://github.com/perkypipes/personal-portfolio-tests-complete/tree/master/js)
+* [Javascript Folders](https://github.com/perkypipes/personal-portfolio-tests-complete/tree/master/js)
 * Proper use of variables with proper scope
 * [Good use of conditional logic and value comparison](https://github.com/perkypipes/personal-portfolio-tests-complete/blob/master/js/pokemon.js)
 * proper use of String manipulation
